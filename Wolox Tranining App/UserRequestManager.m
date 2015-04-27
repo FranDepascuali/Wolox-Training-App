@@ -10,6 +10,7 @@
 #import "RequestManager.h"
 
 #define USER_PATH @"1/users/"
+#define LOGIN_PATH @"1/login/"
 
 @interface UserRequestManager()
 
@@ -19,10 +20,10 @@
 
 @implementation UserRequestManager
 
-- (id)initWithUrl:(NSString*)url {
+- (id)init {
     self = [super init];
     if(self) {
-        self.manager = [self.manager initWithUrl:url];
+        self.manager = [RequestManager sharedManager];
     }
     return self;
 }
@@ -32,6 +33,14 @@
     [parameters setObject: email forKey: @"username"];
     [parameters setObject: password forKey: @"password"];
     [self.manager performPostRequest: parameters path:USER_PATH success:successBlock error:errorBlock];
+}
+
+- (void)logInWithEmail:(NSString*)email password:(NSString*)password success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock{
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    [parameters setObject: email forKey: @"username"];
+    [parameters setObject: password forKey: @"password"];
+    
+    [self.manager performGetRequest: parameters path:LOGIN_PATH success:successBlock error:errorBlock];
 }
 
 @end
