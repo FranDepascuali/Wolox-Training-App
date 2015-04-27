@@ -1,60 +1,57 @@
 //
-//  SignUpViewModel.m
+//  LogInViewModel.m
 //  Wolox Tranining App
 //
-//  Created by Francisco Depascuali on 4/24/15.
+//  Created by Francisco Depascuali on 5/4/15.
 //  Copyright (c) 2015 Francisco Depascuali. All rights reserved.
 //
 
-#import "SignUpViewModel.h"
+#import "LogInViewModel.h"
 #import "UserRequestManager.h"
-#import "AFNetworking.h"
+#import "UIKit/UIKit.h"
 
 #define TERMS_AND_CONDITIONS @"http://www.wolox.com.ar/"
 
-@interface SignUpViewModel()
+@interface LogInViewModel()
 
 @property (strong, nonatomic) UserRequestManager *manager;
 
 @end
 
-@implementation SignUpViewModel
+@implementation LogInViewModel
 
 - (id)init {
     self = [super init];
     if(self) {
         self.manager = [[UserRequestManager alloc] init];
         self.emailFormatErrorMessage = @"El e-mail ingresado es inválido";
-        self.passwordMatchErrorMessage = @"Las contraseñas ingresadas no coinciden";
     }
     return self;
 }
 
-- (BOOL)password:(NSString*)password matchConfirmPassword:(NSString*)confirmPassword {
-    return [password isEqualToString:confirmPassword];
-}
-
-- (void)createUserWithEmail:(NSString*)email password:(NSString*)password success:(void(^)(void))successBlock error:(void(^)(NSString *))errorBlock {
-    [self.manager createUserWithEmail:email password:password success:^(id response) {
+- (void)logInWithEmail:(NSString*)email password:(NSString*)password success:(void(^)(void))successBlock error:(void(^)(NSString*))errorBlock {
+    [self.manager logInWithEmail:email password:password success:^(id response) {
         NSString *sessionToken = [response valueForKey:@"sessionToken"];
         [[NSUserDefaults standardUserDefaults] setObject:sessionToken forKey:@"UserSession"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         if(successBlock) {
             successBlock();
         }
-    } error:^(NSString* err) {
+    } error:^(NSString * err) {
         if(errorBlock)
             errorBlock(err);
     }];
 }
+
+- (void)openTermsAndConditions {
+    [self openPage:TERMS_AND_CONDITIONS];
+
+}
+
 - (BOOL)emailIsCorrect:(NSString*)email {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:email];
-}
-
-- (void)openTermsAndConditions {
-    [self openPage:TERMS_AND_CONDITIONS];
 }
 
 #pragma mark - Private methods

@@ -18,12 +18,8 @@
 
 @implementation SignUpViewController
 
-- (IBAction)termsButtonClicked:(id)sender {
-    [self.viewModel openTermsAndConditions];
-}
-
 - (IBAction)createUserButtonClicked:(id)sender {
-    if (![self.viewModel emailIsCorrect: self.emailTextField.text]) {
+    if(![self.viewModel emailIsCorrect: self.emailTextField.text]) {
         [self displayError: self.viewModel.emailFormatErrorMessage];
         return;
     }
@@ -32,10 +28,14 @@
         return;
     }
     [self.viewModel createUserWithEmail:self.emailTextField.text password:self.passwordTextField.text success:^ {
-        // TODO: abrir scene de loggin
+        // TODO: abrir scene de news
     } error:^(NSString* error) {
         [self displayError:error];
     }];
+}
+
+- (IBAction)termsButtonClicked:(id)sender {
+    [self.viewModel openTermsAndConditions];
 }
 
 - (void)viewDidLoad {
@@ -48,4 +48,3 @@
 }
 
 @end
-
