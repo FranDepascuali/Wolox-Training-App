@@ -39,6 +39,7 @@
 }
 
 - (void)viewDidLoad {
+//    NSLog(@"%@", [[[NSUserDefaults standardUserDefaults] dictionaryRepresentation] allKeys]);
     [super viewDidLoad];
     self.viewModel = [[SignUpViewModel alloc] init];
 }

@@ -9,6 +9,7 @@
 #import "RequestManager.h"
 #import "AFNetworking.h"
 
+<<<<<<< HEAD
 #define PARSE_APPLICATION_ID @"kLRpYZ9OqIMFJ8zDyrqFlJhWEAabsO20bfZfBXgT"
 #define PARSE_REST_API_KEY @"c2Vi5MRQx5WxhppghBZy4KYIGjQ6U0CeLAY6UHXO"
 #define CONTENT_TYPE @"application/json"
@@ -17,10 +18,21 @@
 
 @property (strong, nonatomic) AFHTTPRequestOperationManager *manager;
 
+=======
+
+typedef enum ConnectionType : NSUInteger {
+    USERS,
+    OBJECTS
+} ConnectionType;
+
+@interface RequestManager()
+    @property (strong, nonatomic) AFHTTPRequestOperationManager *manager;
+>>>>>>> View controller y Model view controller.
 @end
 
 @implementation RequestManager
 
+<<<<<<< HEAD
 - (id)initWithUrl:(NSString*)url {
     self = [super init];
     if(self) {
@@ -35,18 +47,53 @@
 }
 
 - (void)performPostRequest:(NSMutableDictionary*)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock {
+=======
+- (id)initWithUrl:(NSString *)url{
+    self = [super init];
+    self.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL: [NSURL URLWithString:url]];
+    self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [self.manager.requestSerializer setValue:@"kLRpYZ9OqIMFJ8zDyrqFlJhWEAabsO20bfZfBXgT" forHTTPHeaderField:@"X-Parse-Application-Id"];
+    [self.manager.requestSerializer setValue:@"c2Vi5MRQx5WxhppghBZy4KYIGjQ6U0CeLAY6UHXO" forHTTPHeaderField:@"X-Parse-REST-API-Key"];
+    [self.manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    return self;
+}
+
+- (void)createUserWithEmail:(NSString*)email password:(NSString*) password success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock {
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    [parameters setObject: email forKey: @"username"];
+    [parameters setObject: password forKey: @"password"];
+    
+    [self performPostRequest: parameters path:[self getPath:USERS] success:successBlock error:errorBlock];
+}
+
+#pragma mark - Private methods
+
+- (void)performPostRequest:(NSMutableDictionary *)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString *))errorBlock {
+>>>>>>> View controller y Model view controller.
     [self.manager POST:path parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if(successBlock) {
             successBlock(responseObject);
         }
+<<<<<<< HEAD
     } failure:^(AFHTTPRequestOperation* operation, NSError* error) {
+=======
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+>>>>>>> View controller y Model view controller.
         if(errorBlock) {
             errorBlock([self getError: error]);
         }
     }];
+<<<<<<< HEAD
 }
 
 - (void)performGetRequest:(NSMutableDictionary*)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock {
+=======
+    return;
+}
+
+- (void)performGetRequest:(NSMutableDictionary *)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString *))errorBlock {
+>>>>>>> View controller y Model view controller.
     [self.manager POST:path parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if(successBlock) {
             successBlock(responseObject);
@@ -56,6 +103,7 @@
             errorBlock([self getError:error]);
         }
     }];
+<<<<<<< HEAD
 }
 
 #pragma mark - Private methods
@@ -63,4 +111,21 @@
 - (NSString*)getError:(NSError*)err {
     return @"Error";
 }
+=======
+    return;
+}
+
+- (NSString*) getError:(NSError*) err{
+    return @"Error";
+}
+
+- (NSString*)getPath:(ConnectionType)type {
+    switch(type){
+        case USERS:
+            return @"1/users/";
+        case OBJECTS:
+            return @"1/classes";
+    }
+}
+>>>>>>> View controller y Model view controller.
 @end

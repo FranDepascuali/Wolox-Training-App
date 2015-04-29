@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+<<<<<<< HEAD
 typedef enum ConnectionType : NSUInteger {
     USERS,
     OBJECTS
@@ -20,5 +21,12 @@ typedef enum ConnectionType : NSUInteger {
 - (void)performPostRequest:(NSMutableDictionary*)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock;
 
 - (void)performGetRequest:(NSMutableDictionary*)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock;
+=======
+@interface RequestManager : NSObject
+
+- (id)initWithUrl: (NSString *) url;
+
+- (void)createUserWithEmail:(NSString*)email password:(NSString*) password success:(void(^)(id))successBlock error:(void(^)(NSString *))errorBlock;
+>>>>>>> View controller y Model view controller.
 
 @end

@@ -116,8 +116,6 @@
 				F8E4710E1AEE615400A709C1 /* SignUpViewController.m */,
 				F82AD73C1AEA87490039D8C6 /* SignUpViewModel.h */,
 				F82AD73D1AEA87490039D8C6 /* SignUpViewModel.m */,
-				F8CD9DE31AE7E6C400D4FF53 /* AppDelegate.h */,
-				F8CD9DE41AE7E6C400D4FF53 /* AppDelegate.m */,
 				F8CD9DEC1AE7E6C400D4FF53 /* Main.storyboard */,
 				F8CD9DEF1AE7E6C400D4FF53 /* Images.xcassets */,
 				F8CD9DF11AE7E6C400D4FF53 /* LaunchScreen.xib */,

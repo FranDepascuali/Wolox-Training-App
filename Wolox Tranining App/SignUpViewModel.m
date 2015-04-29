@@ -7,14 +7,12 @@
 //
 
 #import "SignUpViewModel.h"
-#import "UserRequestManager.h"
+#import "RequestManager.h"
 #import "AFNetworking.h"
-
-#define TERMS_AND_CONDITIONS @"http://www.wolox.com.ar"
 
 @interface SignUpViewModel()
 
-@property (strong, nonatomic) UserRequestManager *manager;
+@property (strong, nonatomic) RequestManager *manager;
 
 @end
 
@@ -47,7 +45,6 @@
             errorBlock(err);
     }];
 }
-
 - (BOOL)emailIsCorrect:(NSString*)email {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
@@ -63,5 +60,4 @@
 - (void)openPage:(NSString*)url {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
-
 @end

@@ -249,13 +249,10 @@
                                 <include reference="dXw-wz-2Oo"/>
                             </mask>
                             <mask key="constraints">
-<<<<<<< HEAD
-=======
                                 <include reference="1pt-hZ-l6q"/>
                                 <include reference="aaR-pL-AWn"/>
                                 <include reference="nuh-5h-g4l"/>
                                 <include reference="1mD-XD-hE1"/>
->>>>>>> View model and controller for sign up.
                                 <include reference="foN-Z9-1hc"/>
                                 <include reference="ncq-c2-a1n"/>
                                 <include reference="3DJ-ED-pOl"/>
@@ -269,7 +266,6 @@
                                 <include reference="411-2x-ZAA"/>
                                 <include reference="VSz-YI-2Jd"/>
                                 <include reference="pjd-3k-hGf"/>
-<<<<<<< HEAD
                                 <include reference="1pt-hZ-l6q"/>
                                 <include reference="aaR-pL-AWn"/>
                                 <include reference="nuh-5h-g4l"/>
@@ -277,35 +273,20 @@
                                 <include reference="5r0-NI-JBg"/>
                                 <include reference="k2S-jF-zEb"/>
                                 <include reference="1mD-XD-hE1"/>
-=======
-                                <include reference="1RH-ZR-ZfN"/>
-                                <include reference="5r0-NI-JBg"/>
-                                <include reference="k2S-jF-zEb"/>
->>>>>>> View model and controller for sign up.
                             </mask>
                         </variation>
                     </view>
                     <connections>
-<<<<<<< HEAD
                         <outlet property="confirmPasswordTextField" destination="DWl-dp-d2a" id="nCj-z6-Fo7"/>
                         <outlet property="createUserButton" destination="8cU-qO-mDj" id="FRj-8H-rAH"/>
                         <outlet property="emailTextField" destination="f1h-Pd-bco" id="0KW-2d-15M"/>
                         <outlet property="passwordTextField" destination="AgZ-ZF-U1K" id="jnh-Ic-DIH"/>
                         <outlet property="termsButton" destination="dXw-wz-2Oo" id="UCR-wx-lrb"/>
-=======
-                        <outlet property="confirmPassword" destination="DWl-dp-d2a" id="58v-GE-2Sm"/>
-                        <outlet property="email_input" destination="f1h-Pd-bco" id="IPa-TQ-AVg"/>
-                        <outlet property="joinButton" destination="8cU-qO-mDj" id="5tf-GJ-n03"/>
->>>>>>> View model and controller for sign up.
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uz5-fx-9wb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="-75" y="0.0"/>
-=======
-            <point key="canvasLocation" x="-813" y="0.0"/>
->>>>>>> View model and controller for sign up.
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -320,18 +301,11 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="888" y="0.0"/>
-=======
-            <point key="canvasLocation" x="0.0" y="0.0"/>
->>>>>>> View model and controller for sign up.
         </scene>
     </scenes>
     <resources>
         <image name="header_logo" width="62" height="45"/>
-<<<<<<< HEAD
         <image name="sign_in_logo" width="210" height="150"/>
-=======
->>>>>>> View model and controller for sign up.
     </resources>
 </document>
