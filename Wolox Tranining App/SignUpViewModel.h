@@ -7,14 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface SignUpViewModel : NSObject
-	@property (nonatomic, readwrite) NSString *email_input;
-	@property (nonatomic, readwrite) NSString *password;
-	@property (nonatomic, readwrite) NSString *confirmPassword;
+@interface SignUpViewModel : BaseModel
 
-- (BOOL) inputIsCorrect: (NSString*) email password:(NSString*) password confirmPassword: (NSString*) confirmPassword;
-- (BOOL) emailIsCorrect: (NSString*) email;
-- (void) openPage: (NSString *) url;
-- (NSString*) getError: (NSString *) email password: (NSString*) password confirmPassword: (NSString*) confirmPassword;
+- (void)createUserWithEmail:(NSString*)email password:(NSString*) password success:(void(^)(void))successBlock error:(void(^)(NSString *))errorBlock;
+
+- (BOOL)password:(NSString*)password matchConfirmPassword:(NSString*)confirmPassword;
+
 @end

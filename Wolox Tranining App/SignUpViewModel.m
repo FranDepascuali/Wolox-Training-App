@@ -7,23 +7,39 @@
 //
 
 #import "SignUpViewModel.h"
-#import "UIKit/UIKit.h"
+#import "RequestManager.h"
+#import "AFNetworking.h"
+
+@interface SignUpViewModel()
+
+@property (strong, nonatomic) RequestManager *manager;
+
+@end
 
 @implementation SignUpViewModel
 
-- (BOOL)inputIsCorrect: (NSString*) email password:(NSString*) password confirmPassword: (NSString*) confirmPassword{
-	return false;
+- (id)init{
+    self = [super init];
+    self.manager = [[RequestManager alloc] initWithUrl: @"https://api.parse.com"];
+    return self;
 }
 
-- (BOOL) emailIsCorrect: (NSString*) email{
-	return false;
+- (BOOL)password:(NSString*)password matchConfirmPassword:(NSString*)confirmPassword{
+    return [password isEqualToString:confirmPassword];
 }
 
--(void) openPage: (NSString *) url{
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+- (void)createUserWithEmail:(NSString*)email password: (NSString*)password success:(void(^)(void))successBlock error:(void(^)(NSString *))errorBlock {
+    [self.manager createUserWithEmail:email password:password success:^(id response) {
+        NSString *sessionToken = [response valueForKey:@"sessionToken"];
+        [[NSUserDefaults standardUserDefaults] setObject:sessionToken forKey:@"UserSession"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        if(successBlock) {
+            successBlock();
+        }
+    } error:^(NSString * err) {
+        if(errorBlock)
+            errorBlock(err);
+    }];
 }
 
-- (NSString*) getError: (NSString *) email password: (NSString*) password confirmPassword: (NSString*) confirmPassword{
-	return @"error";
-}
 @end

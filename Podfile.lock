@@ -20,16 +20,19 @@ PODS:
   - AFNetworking/UIKit (2.5.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - JSONModel (1.0.2)
   - ObjectiveSugar (1.1.0)
   - Toast (2.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
+  - JSONModel (~> 1.0)
   - ObjectiveSugar (~> 1.1)
   - Toast (~> 2.4)
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  JSONModel: 6ffcb4ffa3659c9e9a2e5d45d6c7705bab187c03
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
   Toast: 0773b8fc0e97352ca6054517bec7ebdd4110029d
 

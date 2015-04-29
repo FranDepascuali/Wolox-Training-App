@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SignUpViewModel.h"
 
 @interface SignUpViewController : UIViewController
 
@@ -16,6 +15,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *confirmPassword;
 @property (weak, nonatomic) IBOutlet UIButton *terms;
 @property (weak, nonatomic) IBOutlet UIButton *joinButton;
-@property (strong, nonatomic) SignUpViewModel *viewModel;
 
 @end
