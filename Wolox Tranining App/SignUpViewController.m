@@ -10,7 +10,6 @@
 #import "Toast/UIView+Toast.h"
 #import "SignUpViewModel.h"
 
-
 @interface SignUpViewController ()
 @property (strong, nonatomic) SignUpViewModel *viewModel;
 @end

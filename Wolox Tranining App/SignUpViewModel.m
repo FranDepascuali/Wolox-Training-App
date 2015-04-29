@@ -9,6 +9,8 @@
 #import "SignUpViewModel.h"
 #import "RequestManager.h"
 #import "AFNetworking.h"
+#import "UIKit/UIKit.h"
+#import "RequestManager.h"
 
 @interface SignUpViewModel()
 
