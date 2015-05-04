@@ -12,6 +12,7 @@
 
 typedef enum ConnectionType : NSUInteger {
     USERS,
+    LOGIN,
     OBJECTS
 } ConnectionType;
 
@@ -40,8 +41,16 @@ typedef enum ConnectionType : NSUInteger {
     [self performPostRequest: parameters path:[self getPath:USERS] success:successBlock error:errorBlock];
 }
 
-#pragma mark - Private methods
+- (void)logInWithEmail:(NSString*)email password:(NSString*)password success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock{
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    [parameters setObject: email forKey: @"username"];
+    [parameters setObject: password forKey: @"password"];
+    
+    [self performGetRequest: parameters path:[self getPath:USERS] success:successBlock error:errorBlock];
+}
 
+
+#pragma mark - Private methods
 - (void)performPostRequest:(NSMutableDictionary *)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString *))errorBlock {
     [self.manager POST:path parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if(successBlock) {
@@ -49,35 +58,42 @@ typedef enum ConnectionType : NSUInteger {
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if(errorBlock) {
-            errorBlock([self getError: error]);
+            errorBlock([self getError: [error code]]);
         }
     }];
     return;
 }
 
 - (void)performGetRequest:(NSMutableDictionary *)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString *))errorBlock {
-    [self.manager POST:path parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [self.manager GET:path parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if(successBlock) {
             successBlock(responseObject);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if(errorBlock) {
-            errorBlock([self getError:error]);
+            errorBlock([self getError:[error code]]);
+            //         errorBlock([NSError errorWithDomain:@"UserExists" code:[operation valueForKey:@"error"] userInfo: nil]);
         }
     }];
     return;
 }
 
-- (NSString*) getError:(NSError*) err{
-    return @"Error";
+- (NSString *)getError:(NSInteger)errCode {
+    switch (errCode) {
+        case 202:
+            return @"El usuario ya existe!";
+    }
+    return @"error";
 }
 
 - (NSString*)getPath:(ConnectionType)type {
     switch(type){
         case USERS:
-            return @"1/users/";
+            return @"1/users";
         case OBJECTS:
             return @"1/classes";
+        case LOGIN:
+            return @"1/login";
     }
 }
 @end
