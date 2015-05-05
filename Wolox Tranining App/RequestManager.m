@@ -44,6 +44,12 @@
     return self;
 }
 
+- (void) getAllNewsWithSuccess:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock{
+    [self performGetRequest: nil path:[self getPath:NEWS] success:successBlock error:errorBlock];
+}
+
+#pragma mark - Private methods
+
 - (void)performPostRequest:(NSMutableDictionary *)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString *))errorBlock {
     [self.manager POST:path parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if(successBlock) {

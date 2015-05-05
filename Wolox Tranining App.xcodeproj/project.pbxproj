@@ -10,8 +10,14 @@
 		9A63F45D37043CE89D151D0E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81726B55BE47D3A50661D4A0 /* libPods.a */; };
 		B970F9F51AF79EA2007468C4 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B970F9F41AF79EA1007468C4 /* LogInViewController.m */; };
 		B970F9FB1AF7A40C007468C4 /* LogInViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B970F9FA1AF7A40C007468C4 /* LogInViewModel.m */; };
+		B970FA011AF7CE81007468C4 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B970FA001AF7CE81007468C4 /* BaseModel.m */; };
 		B9902E361AEFDCD70015B7A8 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9902E351AEFDCD70015B7A8 /* RequestManager.m */; };
 		B99D46311B00E15600A604D4 /* UserRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D46301B00E15600A604D4 /* UserRequestManager.m */; };
+		B9B9AB4E1AF8FDDA00EB511A /* NewsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B9AB4D1AF8FDDA00EB511A /* NewsViewModel.m */; };
+		B9B9AB541AF90ACB00EB511A /* SingleNewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B9AB531AF90ACB00EB511A /* SingleNewTableViewCell.m */; };
+		B9D00A9E1AF8F5750085F13B /* NewsProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D00A9D1AF8F5750085F13B /* NewsProfileViewController.m */; };
+		B9D00AA11AF8F5F80085F13B /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D00AA01AF8F5F80085F13B /* NewsViewController.m */; };
+		B9D00AA41AF8F6600085F13B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D00AA31AF8F6600085F13B /* ProfileViewController.m */; };
 		F82AD73E1AEA87490039D8C6 /* SignUpViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F82AD73D1AEA87490039D8C6 /* SignUpViewModel.m */; };
 		F8CD9DE21AE7E6C400D4FF53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD9DE11AE7E6C400D4FF53 /* main.m */; };
 		F8CD9DE51AE7E6C400D4FF53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD9DE41AE7E6C400D4FF53 /* AppDelegate.m */; };
@@ -43,6 +49,16 @@
 		B9902E351AEFDCD70015B7A8 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
 		B99D462F1B00E15600A604D4 /* UserRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRequestManager.h; sourceTree = "<group>"; };
 		B99D46301B00E15600A604D4 /* UserRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRequestManager.m; sourceTree = "<group>"; };
+		B9B9AB4C1AF8FDDA00EB511A /* NewsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewModel.h; sourceTree = "<group>"; };
+		B9B9AB4D1AF8FDDA00EB511A /* NewsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewModel.m; sourceTree = "<group>"; };
+		B9B9AB521AF90ACB00EB511A /* SingleNewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleNewTableViewCell.h; sourceTree = "<group>"; };
+		B9B9AB531AF90ACB00EB511A /* SingleNewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleNewTableViewCell.m; sourceTree = "<group>"; };
+		B9D00A9C1AF8F5750085F13B /* NewsProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsProfileViewController.h; sourceTree = "<group>"; };
+		B9D00A9D1AF8F5750085F13B /* NewsProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsProfileViewController.m; sourceTree = "<group>"; };
+		B9D00A9F1AF8F5F80085F13B /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		B9D00AA01AF8F5F80085F13B /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		B9D00AA21AF8F6600085F13B /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		B9D00AA31AF8F6600085F13B /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		F82AD73C1AEA87490039D8C6 /* SignUpViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewModel.h; sourceTree = "<group>"; };
 		F82AD73D1AEA87490039D8C6 /* SignUpViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewModel.m; sourceTree = "<group>"; };
 		F8CD9DDC1AE7E6C400D4FF53 /* Wolox Tranining App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wolox Tranining App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,20 +142,26 @@
 				B970F9F41AF79EA1007468C4 /* LogInViewController.m */,
 				B970F9F91AF7A40C007468C4 /* LogInViewModel.h */,
 				B970F9FA1AF7A40C007468C4 /* LogInViewModel.m */,
-				B9902E341AEFDCD70015B7A8 /* RequestManager.h */,
-				B9902E351AEFDCD70015B7A8 /* RequestManager.m */,
-				F8CD9DEC1AE7E6C400D4FF53 /* Main.storyboard */,
+				B9D00A9F1AF8F5F80085F13B /* NewsViewController.h */,
+				B9D00AA01AF8F5F80085F13B /* NewsViewController.m */,
+				B9B9AB4C1AF8FDDA00EB511A /* NewsViewModel.h */,
+				B9B9AB4D1AF8FDDA00EB511A /* NewsViewModel.m */,
 				F8CD9DEF1AE7E6C400D4FF53 /* Images.xcassets */,
-				F8CD9DE31AE7E6C400D4FF53 /* AppDelegate.h */,
-				F8CD9DE41AE7E6C400D4FF53 /* AppDelegate.m */,
 				F8CD9DF11AE7E6C400D4FF53 /* LaunchScreen.xib */,
 				F8CD9DDF1AE7E6C400D4FF53 /* Supporting Files */,
+				F8CD9DEC1AE7E6C400D4FF53 /* Main.storyboard */,
 				B9902E341AEFDCD70015B7A8 /* RequestManager.h */,
 				B9902E351AEFDCD70015B7A8 /* RequestManager.m */,
 				F8CD9DE31AE7E6C400D4FF53 /* AppDelegate.h */,
 				F8CD9DE41AE7E6C400D4FF53 /* AppDelegate.m */,
 				B99D462F1B00E15600A604D4 /* UserRequestManager.h */,
 				B99D46301B00E15600A604D4 /* UserRequestManager.m */,
+				B9D00A9C1AF8F5750085F13B /* NewsProfileViewController.h */,
+				B9D00A9D1AF8F5750085F13B /* NewsProfileViewController.m */,
+				B9D00AA21AF8F6600085F13B /* ProfileViewController.h */,
+				B9D00AA31AF8F6600085F13B /* ProfileViewController.m */,
+				B9B9AB521AF90ACB00EB511A /* SingleNewTableViewCell.h */,
+				B9B9AB531AF90ACB00EB511A /* SingleNewTableViewCell.m */,
 			);
 			path = "Wolox Tranining App";
 			sourceTree = "<group>";
@@ -305,11 +327,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B99D46311B00E15600A604D4 /* UserRequestManager.m in Sources */,
+				B9B9AB541AF90ACB00EB511A /* SingleNewTableViewCell.m in Sources */,
 				B9902E361AEFDCD70015B7A8 /* RequestManager.m in Sources */,
+				B9D00A9E1AF8F5750085F13B /* NewsProfileViewController.m in Sources */,
 				F8CD9DE51AE7E6C400D4FF53 /* AppDelegate.m in Sources */,
 				B970F9F51AF79EA2007468C4 /* LogInViewController.m in Sources */,
 				F8E4710F1AEE615400A709C1 /* SignUpViewController.m in Sources */,
 				F82AD73E1AEA87490039D8C6 /* SignUpViewModel.m in Sources */,
+				B9B9AB4E1AF8FDDA00EB511A /* NewsViewModel.m in Sources */,
+				B9D00AA11AF8F5F80085F13B /* NewsViewController.m in Sources */,
+				B9D00AA41AF8F6600085F13B /* ProfileViewController.m in Sources */,
 				B970F9FB1AF7A40C007468C4 /* LogInViewModel.m in Sources */,
 				F8CD9DE21AE7E6C400D4FF53 /* main.m in Sources */,
 			);
