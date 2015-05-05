@@ -13,7 +13,7 @@
 typedef enum ConnectionType : NSUInteger {
     USERS,
     LOGIN,
-    OBJECTS
+    NEWS
 } ConnectionType;
 
 @interface RequestManager()
@@ -49,6 +49,9 @@ typedef enum ConnectionType : NSUInteger {
     [self performGetRequest: parameters path:[self getPath:USERS] success:successBlock error:errorBlock];
 }
 
+- (void) getAllNewsWithSuccess:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock{
+    [self performGetRequest: nil path:[self getPath:NEWS] success:successBlock error:errorBlock];
+}
 
 #pragma mark - Private methods
 - (void)performPostRequest:(NSMutableDictionary *)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString *))errorBlock {
@@ -90,8 +93,8 @@ typedef enum ConnectionType : NSUInteger {
     switch(type){
         case USERS:
             return @"1/users";
-        case OBJECTS:
-            return @"1/classes";
+        case NEWS:
+            return @"1/classes/news";
         case LOGIN:
             return @"1/login";
     }
