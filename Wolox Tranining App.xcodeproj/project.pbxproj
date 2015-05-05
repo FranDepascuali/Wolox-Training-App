@@ -11,7 +11,6 @@
 		B970FA011AF7CE81007468C4 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B970FA001AF7CE81007468C4 /* BaseModel.m */; };
 		B970F9F51AF79EA2007468C4 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B970F9F41AF79EA1007468C4 /* LogInViewController.m */; };
 		B970F9FB1AF7A40C007468C4 /* LogInViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B970F9FA1AF7A40C007468C4 /* LogInViewModel.m */; };
-		B970F9FE1AF7C3C8007468C4 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B970F9FD1AF7C3C8007468C4 /* BaseModel.m */; };
 		B9902E361AEFDCD70015B7A8 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9902E351AEFDCD70015B7A8 /* RequestManager.m */; };
 		F82AD73E1AEA87490039D8C6 /* SignUpViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F82AD73D1AEA87490039D8C6 /* SignUpViewModel.m */; };
 		F8CD9DE21AE7E6C400D4FF53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD9DE11AE7E6C400D4FF53 /* main.m */; };
