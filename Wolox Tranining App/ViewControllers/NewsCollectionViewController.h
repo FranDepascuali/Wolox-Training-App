@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Toast/UIView+Toast.h"
 
-@interface NewsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
-
+@interface NewsCollectionViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *newsTable;
 @end
