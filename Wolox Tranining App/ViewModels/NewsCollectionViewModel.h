@@ -8,16 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseModel.h"
-#import <UIKit/UIKit.h> 
+#import "NewsViewModel.h"
 
-@interface NewsViewModel : BaseModel
-
-- (NSString*)getUser;
-- (UIImage*)getImage;
-- (NSString*)getNewDescription;
+@interface NewsCollectionViewModel : BaseModel
 
 - (void)fetchNewsWithSuccess:(void(^)(void))successBlock error:(void(^)(NSString *))errorBlock;
+
 - (NSUInteger)count;
-- (NewsViewModel *)viewModelAtIndex:(NSUInteger)index;
+
+- (NewsViewModel *)newsViewModelAtIndex:(NSUInteger)index;
 
 @end

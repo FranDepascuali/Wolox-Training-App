@@ -38,7 +38,7 @@ typedef enum ConnectionType : NSUInteger {
     [parameters setObject: email forKey: @"username"];
     [parameters setObject: password forKey: @"password"];
     
-    [self performPostRequest: parameters path:[self getPath:USERS] success:successBlock error:errorBlock];
+    [self performPostRequest: parameters path:[self getPath:USERS endingWith:nil] success:successBlock error:errorBlock];
 }
 
 - (void)logInWithEmail:(NSString*)email password:(NSString*)password success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock{
@@ -49,8 +49,13 @@ typedef enum ConnectionType : NSUInteger {
     [self performGetRequest: parameters path:[self getPath:USERS] success:successBlock error:errorBlock];
 }
 
-- (void) getAllNewsWithSuccess:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock{
+- (void) fetchNewsWithSuccess:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock{
     [self performGetRequest: nil path:[self getPath:NEWS] success:successBlock error:errorBlock];
+}
+
+- (void)fetchUserNameWithUserId: userId success: (void(^)(id))successBlock error:(void(^)(NSString*))errorBlock{
+    [self performGetRequest:nil path:[self getPath: USERS endingWith:userId] success:successBlock error:errorBlock];
+    
 }
 
 #pragma mark - Private methods
@@ -89,14 +94,26 @@ typedef enum ConnectionType : NSUInteger {
     return @"error";
 }
 
-- (NSString*)getPath:(ConnectionType)type {
+- (NSString*)getPath:(ConnectionType)type endingWith:(NSString*)end {
+    NSString* start;
     switch(type){
         case USERS:
-            return @"1/users";
+            start = @"1/users/";
+            break;
         case NEWS:
-            return @"1/classes/news";
+            start = @"1/classes/news/";
+            break;
         case LOGIN:
-            return @"1/login";
+            start = @"1/login/";
+            break;
     }
+    if(end)
+        return [start stringByAppendingString:end];
+    return start;
 }
+
+- (NSString*)getPath:(ConnectionType)type{
+    return [self getPath:type endingWith:nil];
+}
+
 @end
