@@ -46,7 +46,7 @@ typedef enum ConnectionType : NSUInteger {
     [parameters setObject: email forKey: @"username"];
     [parameters setObject: password forKey: @"password"];
     
-    [self performGetRequest: parameters path:[self getPath:USERS] success:successBlock error:errorBlock];
+    [self performGetRequest: parameters path:[self getPath:LOGIN] success:successBlock error:errorBlock];
 }
 
 
