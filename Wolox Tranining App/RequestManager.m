@@ -33,7 +33,25 @@
     return self;
 }
 
-- (void)performPostRequest:(NSMutableDictionary*)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock {
+- (void)createUserWithEmail:(NSString*)email password:(NSString*) password success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock {
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    [parameters setObject: email forKey: @"username"];
+    [parameters setObject: password forKey: @"password"];
+    
+    [self performPostRequest: parameters path:[self getPath:USERS] success:successBlock error:errorBlock];
+}
+
+- (void)logInWithEmail:(NSString*)email password:(NSString*)password success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock{
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    [parameters setObject: email forKey: @"username"];
+    [parameters setObject: password forKey: @"password"];
+    
+    [self performGetRequest: parameters path:[self getPath:LOGIN] success:successBlock error:errorBlock];
+}
+
+
+#pragma mark - Private methods
+- (void)performPostRequest:(NSMutableDictionary *)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString *))errorBlock {
     [self.manager POST:path parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if(successBlock) {
             successBlock(responseObject);
