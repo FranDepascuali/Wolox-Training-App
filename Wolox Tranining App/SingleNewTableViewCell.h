@@ -13,6 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *user;
 @property (weak, nonatomic) IBOutlet UIImageView *userImage;
 @property (weak, nonatomic) IBOutlet UILabel *desc;
-
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingGif;
 
 @end

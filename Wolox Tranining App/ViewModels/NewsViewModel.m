@@ -22,10 +22,6 @@
     self = [super init];
     if(self)
         self.singleNew = [[News alloc] initWithUserId: userId imageUrl: imgUrl description: title];
-//    self.singleNew = [[News alloc] init];
-//    self.singleNew.userId = userId;
-//    self.singleNew.image = imgUrl;
-//    self.singleNew.desc = title;
     self.manager = [[RequestManager alloc] initWithUrl: @"https://api.parse.com"];
     return self;
 }

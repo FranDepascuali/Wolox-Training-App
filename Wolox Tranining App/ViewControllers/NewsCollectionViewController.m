@@ -31,7 +31,6 @@
     self.newsTable.dataSource=self;
     [self.model fetchNewsWithSuccess:^{
         [self.newsTable reloadData];
-        // TODO: hide animation
     }error:^(NSString * err){
         [self displayError:err];
     }];

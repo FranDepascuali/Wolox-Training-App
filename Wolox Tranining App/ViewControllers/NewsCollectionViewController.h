@@ -10,5 +10,7 @@
 #import "Toast/UIView+Toast.h"
 
 @interface NewsCollectionViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UITableView *newsTable;
+
 @end
