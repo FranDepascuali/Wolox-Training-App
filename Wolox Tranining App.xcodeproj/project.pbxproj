@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9A63F45D37043CE89D151D0E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81726B55BE47D3A50661D4A0 /* libPods.a */; };
+		B9902E361AEFDCD70015B7A8 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9902E351AEFDCD70015B7A8 /* RequestManager.m */; };
+		B99D46311B00E15600A604D4 /* UserRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D46301B00E15600A604D4 /* UserRequestManager.m */; };
 		F82AD73E1AEA87490039D8C6 /* SignUpViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F82AD73D1AEA87490039D8C6 /* SignUpViewModel.m */; };
 		F8CD9DE21AE7E6C400D4FF53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD9DE11AE7E6C400D4FF53 /* main.m */; };
 		F8CD9DE51AE7E6C400D4FF53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD9DE41AE7E6C400D4FF53 /* AppDelegate.m */; };
@@ -31,6 +33,10 @@
 		4EE0CEC310899A93D3573FF6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5758CB3A9EC9A4E62D827F6D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		81726B55BE47D3A50661D4A0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9902E341AEFDCD70015B7A8 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
+		B9902E351AEFDCD70015B7A8 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
+		B99D462F1B00E15600A604D4 /* UserRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRequestManager.h; sourceTree = "<group>"; };
+		B99D46301B00E15600A604D4 /* UserRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRequestManager.m; sourceTree = "<group>"; };
 		F82AD73C1AEA87490039D8C6 /* SignUpViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewModel.h; sourceTree = "<group>"; };
 		F82AD73D1AEA87490039D8C6 /* SignUpViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewModel.m; sourceTree = "<group>"; };
 		F8CD9DDC1AE7E6C400D4FF53 /* Wolox Tranining App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wolox Tranining App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +122,12 @@
 				F8CD9DEF1AE7E6C400D4FF53 /* Images.xcassets */,
 				F8CD9DF11AE7E6C400D4FF53 /* LaunchScreen.xib */,
 				F8CD9DDF1AE7E6C400D4FF53 /* Supporting Files */,
+				B9902E341AEFDCD70015B7A8 /* RequestManager.h */,
+				B9902E351AEFDCD70015B7A8 /* RequestManager.m */,
+				F8CD9DE31AE7E6C400D4FF53 /* AppDelegate.h */,
+				F8CD9DE41AE7E6C400D4FF53 /* AppDelegate.m */,
+				B99D462F1B00E15600A604D4 /* UserRequestManager.h */,
+				B99D46301B00E15600A604D4 /* UserRequestManager.m */,
 			);
 			path = "Wolox Tranining App";
 			sourceTree = "<group>";
@@ -280,6 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B99D46311B00E15600A604D4 /* UserRequestManager.m in Sources */,
+				B9902E361AEFDCD70015B7A8 /* RequestManager.m in Sources */,
 				F8CD9DE51AE7E6C400D4FF53 /* AppDelegate.m in Sources */,
 				F8E4710F1AEE615400A709C1 /* SignUpViewController.m in Sources */,
 				F82AD73E1AEA87490039D8C6 /* SignUpViewModel.m in Sources */,
