@@ -10,9 +10,9 @@
 
 @interface SingleNewTableViewCell : UITableViewCell
 
-@property (nonatomic, weak) IBOutlet UITextView *user;
-@property (nonatomic, weak) IBOutlet UIImageView *userImage;
-@property (weak, nonatomic) IBOutlet UITextView *desc;
+@property (weak, nonatomic) IBOutlet UILabel *user;
+@property (weak, nonatomic) IBOutlet UIImageView *userImage;
+@property (weak, nonatomic) IBOutlet UILabel *desc;
 
 
 @end
