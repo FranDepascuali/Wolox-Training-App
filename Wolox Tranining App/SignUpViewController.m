@@ -32,7 +32,7 @@
         return;
     }
     [self.viewModel createUserWithEmail:self.emailTextField.text password:self.passwordTextField.text success:^ {
-        // TODO: abrir scene de loggin
+        // TODO: abrir scene de news
     } error:^(NSString* error) {
         [self displayError:error];
     }];

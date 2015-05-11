@@ -7,14 +7,14 @@
 //
 
 #import "SignUpViewModel.h"
-#import "RequestManager.h"
+#import "UserRequestManager.h"
 #import "AFNetworking.h"
 #import "UIKit/UIKit.h"
 #import "RequestManager.h"
 
 @interface SignUpViewModel()
 
-@property (strong, nonatomic) RequestManager *manager;
+@property (strong, nonatomic) UserRequestManager *manager;
 
 @end
 
