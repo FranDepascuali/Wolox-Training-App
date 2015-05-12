@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaseModel.h"
 
-@interface LogInViewModel : BaseModel
+@interface LogInViewModel : NSObject
 
 - (void)logInWithEmail:(NSString*)email password:(NSString*)password success:(void(^)(void))successBlock error:(void(^)(NSString*))errorBlock;
+
+- (void)openTermsAndConditions;
 
 @end

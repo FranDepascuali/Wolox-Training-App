@@ -10,10 +10,10 @@
 
 @interface RequestManager : NSObject
 
-- (id)initWithUrl:(NSString*)url;
-
 - (void)performPostRequest:(NSMutableDictionary*)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock;
 
 - (void)performGetRequest:(NSMutableDictionary*)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock;
+
++ (id)sharedManager;
 
 @end

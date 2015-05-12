@@ -9,8 +9,8 @@
 #import "SignUpViewModel.h"
 #import "UserRequestManager.h"
 #import "AFNetworking.h"
-#import "UIKit/UIKit.h"
-#import "RequestManager.h"
+
+#define TERMS_AND_CONDITIONS @"http://www.wolox.com.ar/"
 
 @interface SignUpViewModel()
 
@@ -23,7 +23,7 @@
 - (id)init {
     self = [super init];
     if(self) {
-        self.manager = [[UserRequestManager alloc] initWithUrl: @"https://api.parse.com"];
+        self.manager = [[UserRequestManager alloc] init];
         self.emailFormatErrorMessage = @"El e-mail ingresado es inválido";
         self.passwordMatchErrorMessage = @"Las contraseñas ingresadas no coinciden";
     }
@@ -34,7 +34,7 @@
     return [password isEqualToString:confirmPassword];
 }
 
-- (void)createUserWithEmail:(NSString*)email password: (NSString*)password success:(void(^)(void))successBlock error:(void(^)(NSString *))errorBlock {
+- (void)createUserWithEmail:(NSString*)email password:(NSString*)password success:(void(^)(void))successBlock error:(void(^)(NSString *))errorBlock {
     [self.manager createUserWithEmail:email password:password success:^(id response) {
         NSString *sessionToken = [response valueForKey:@"sessionToken"];
         [[NSUserDefaults standardUserDefaults] setObject:sessionToken forKey:@"UserSession"];
@@ -62,4 +62,5 @@
 - (void)openPage:(NSString*)url {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
+
 @end

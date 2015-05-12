@@ -20,10 +20,10 @@
 
 @implementation UserRequestManager
 
-- (id)initWithUrl:(NSString*)url {
+- (id)init {
     self = [super init];
     if(self) {
-        self.manager = [self.manager initWithUrl:url];
+        self.manager = [RequestManager sharedManager];
     }
     return self;
 }
@@ -41,7 +41,7 @@
     [parameters setObject: email forKey: @"username"];
     [parameters setObject: password forKey: @"password"];
     
-    [self performGetRequest: parameters path:[self getPath:LOGIN_PATH] success:successBlock error:errorBlock];
+    [self.manager performGetRequest: parameters path:LOGIN_PATH success:successBlock error:errorBlock];
 }
 
 @end

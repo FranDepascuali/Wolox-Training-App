@@ -19,43 +19,32 @@
 @implementation LogInViewController
 
 - (IBAction)termsButtonClicked:(id)sender {
-    [self.viewModel openPage: @"http://www.wolox.com.ar"];
+    [self.viewModel openTermsAndConditions];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.viewModel = [LogInViewModel new];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//    [self.loadingActivityIndicator stopAnimating];
+    self.loadingActivityIndicator.hidden = YES;
+    self.viewModel = [[LogInViewModel alloc] init];
 }
 
 - (IBAction)logInButtonClicked:(id)sender {
-    
-    [self.viewModel logInWithEmail:self.email_input.text password:self.password.text success:^{
-        // TODO: abrir scene de loggin
-        //    ViewControllerMonitorMenu *monitorMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewControllerMonitorMenu"];
-        //    [self presentViewController:monitorMenuViewController animated:NO completion:nil];}
+    self.loadingActivityIndicator.hidden = NO;
+    [self.loadingActivityIndicator startAnimating];
+    [self.viewModel logInWithEmail:self.emailTextField.text password:self.passwordTextField.text success:^ {
+        [self.loadingActivityIndicator stopAnimating];
+        self.loadingActivityIndicator.hidden = YES;
+        // TODO: abrir scene de news
     } error:^(NSString * error) {
+        [self.loadingActivityIndicator stopAnimating];
+        self.loadingActivityIndicator.hidden = YES;
         [self displayError:error];
     }];
 }
 
-- (void)displayError:(NSString *) error{
+- (void)displayError:(NSString *)error {
     [self.view makeToast:error];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

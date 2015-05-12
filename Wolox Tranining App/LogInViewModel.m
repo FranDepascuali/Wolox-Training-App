@@ -7,23 +7,26 @@
 //
 
 #import "LogInViewModel.h"
-#import "RequestManager.h"
+#import "UserRequestManager.h"
+#import "UIKit/UIKit.h"
+
+#define TERMS_AND_CONDITIONS @"http://www.wolox.com.ar/"
 
 @interface LogInViewModel()
 
-@property (strong, nonatomic) RequestManager *manager;
+@property (strong, nonatomic) UserRequestManager *manager;
 
 @end
 
 @implementation LogInViewModel
 
-- (id)init{
+- (id)init {
     self = [super init];
-    self.manager = [[RequestManager alloc] initWithUrl: @"https://api.parse.com"];
+    self.manager = [[UserRequestManager alloc] init];
     return self;
 }
 
-- (void)logInWithEmail:(NSString*)email password:(NSString*)password success:(void(^)(void))successBlock error:(void(^)(NSString*))errorBlock{
+- (void)logInWithEmail:(NSString*)email password:(NSString*)password success:(void(^)(void))successBlock error:(void(^)(NSString*))errorBlock {
     [self.manager logInWithEmail:email password:password success:^(id response) {
         NSString *sessionToken = [response valueForKey:@"sessionToken"];
         [[NSUserDefaults standardUserDefaults] setObject:sessionToken forKey:@"UserSession"];
@@ -35,6 +38,17 @@
         if(errorBlock)
             errorBlock(err);
     }];
+}
+
+- (void)openTermsAndConditions {
+    [self openPage:TERMS_AND_CONDITIONS];
+
+}
+
+#pragma mark - Private methods
+
+- (void)openPage:(NSString*)url {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 
 @end

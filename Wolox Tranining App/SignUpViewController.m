@@ -23,7 +23,7 @@
 }
 
 - (IBAction)createUserButtonClicked:(id)sender {
-    if (![self.viewModel emailIsCorrect: self.emailTextField.text]) {
+    if(![self.viewModel emailIsCorrect: self.emailTextField.text]) {
         [self displayError: self.viewModel.emailFormatErrorMessage];
         return;
     }
@@ -39,18 +39,12 @@
 }
 
 - (void)viewDidLoad {
-//    NSLog(@"%@", [[[NSUserDefaults standardUserDefaults] dictionaryRepresentation] allKeys]);
     [super viewDidLoad];
     self.viewModel = [[SignUpViewModel alloc] init];
 }
 
 - (void)displayError:(NSString *)error {
     [self.view makeToast:error];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
