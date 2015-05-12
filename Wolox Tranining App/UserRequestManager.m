@@ -35,7 +35,6 @@
     [self.manager performPostRequest: parameters path:USER_PATH success:successBlock error:errorBlock];
 }
 
-
 - (void)logInWithEmail:(NSString*)email password:(NSString*)password success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock{
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     [parameters setObject: email forKey: @"username"];

@@ -24,7 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self.loadingActivityIndicator stopAnimating];
     self.loadingActivityIndicator.hidden = YES;
     self.viewModel = [[LogInViewModel alloc] init];
 }
@@ -42,6 +41,8 @@
         [self displayError:error];
     }];
 }
+
+#pragma mark - Private methods
 
 - (void)displayError:(NSString *)error {
     [self.view makeToast:error];
