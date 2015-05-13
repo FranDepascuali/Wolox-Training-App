@@ -18,10 +18,6 @@
 
 @implementation SignUpViewController
 
-- (IBAction)termsButtonClicked:(id)sender {
-    [self.viewModel openTermsAndConditions];
-}
-
 - (IBAction)createUserButtonClicked:(id)sender {
     if(![self.viewModel emailIsCorrect: self.emailTextField.text]) {
         [self displayError: self.viewModel.emailFormatErrorMessage];
@@ -36,6 +32,10 @@
     } error:^(NSString* error) {
         [self displayError:error];
     }];
+}
+
+- (IBAction)termsButtonClicked:(id)sender {
+    [self.viewModel openTermsAndConditions];
 }
 
 - (void)viewDidLoad {

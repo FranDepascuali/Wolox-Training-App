@@ -64,7 +64,7 @@
                                 </state>
                                 <connections>
                                     <action selector="termsButtonClicked:" destination="aRi-OV-QUt" eventType="touchUpInside" id="OeF-PU-ZPe"/>
-                                    <action selector="termsButtonClicked:" destination="M8j-3I-ycA" eventType="touchUpInside" id="oV6-rq-Yjl"/>
+                                    <action selector="termsButtonClicked:" destination="M8j-3I-ycA" eventType="touchUpInside" id="Y0u-eS-cgb"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="sign_in_logo" translatesAutoresizingMaskIntoConstraints="NO" id="thK-nJ-vKV">
@@ -125,12 +125,12 @@
                                 <exclude reference="msl-LS-AdA"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="XZo-AI-phI"/>
                                 <exclude reference="ym0-iL-I6M"/>
                                 <exclude reference="dJI-wo-kGc"/>
                                 <exclude reference="gcT-PA-TZ2"/>
                                 <exclude reference="wfE-Cj-9ha"/>
                                 <exclude reference="OcX-iO-NcA"/>
-                                <exclude reference="XZo-AI-phI"/>
                                 <exclude reference="JoF-Vw-BGd"/>
                                 <exclude reference="sPJ-us-BKx"/>
                                 <exclude reference="TgA-dH-AAr"/>
@@ -148,12 +148,12 @@
                                 <include reference="msl-LS-AdA"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="XZo-AI-phI"/>
                                 <include reference="ym0-iL-I6M"/>
                                 <include reference="dJI-wo-kGc"/>
                                 <include reference="gcT-PA-TZ2"/>
                                 <include reference="wfE-Cj-9ha"/>
                                 <include reference="OcX-iO-NcA"/>
-                                <include reference="XZo-AI-phI"/>
                                 <include reference="JoF-Vw-BGd"/>
                                 <include reference="sPJ-us-BKx"/>
                                 <include reference="TgA-dH-AAr"/>
@@ -254,7 +254,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="termsButtonClicked:" destination="aRi-OV-QUt" eventType="touchUpInside" id="RfS-be-wtd"/>
+                                    <action selector="termsButtonClicked:" destination="aRi-OV-QUt" eventType="touchUpInside" id="vbh-Dm-FCA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -315,7 +315,6 @@
                         <outlet property="createUserButton" destination="8cU-qO-mDj" id="FRj-8H-rAH"/>
                         <outlet property="emailTextField" destination="f1h-Pd-bco" id="0KW-2d-15M"/>
                         <outlet property="passwordTextField" destination="AgZ-ZF-U1K" id="jnh-Ic-DIH"/>
-                        <outlet property="termsButton" destination="dXw-wz-2Oo" id="UCR-wx-lrb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uz5-fx-9wb" userLabel="First Responder" sceneMemberID="firstResponder"/>
