@@ -13,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
-@property (weak, nonatomic) IBOutlet UIButton *termsButton;
 @property (weak, nonatomic) IBOutlet UIButton *createUserButton;
 
 
