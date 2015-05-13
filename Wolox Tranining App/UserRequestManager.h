@@ -14,4 +14,6 @@
 
 - (void)logInWithEmail:(NSString*)email password:(NSString*)password success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock;
 
+- (void)fetchUserNameWithUserId:(NSString*)userId success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock;
+
 @end

@@ -16,6 +16,4 @@
 
 + (id)sharedManager;
 
-- (void) getAllNewsWithSuccess:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock;
-
 @end
