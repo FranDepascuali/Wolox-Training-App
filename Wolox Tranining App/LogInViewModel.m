@@ -22,8 +22,10 @@
 
 - (id)init {
     self = [super init];
-    self.manager = [[UserRequestManager alloc] init];
-    self.emailFormatErrorMessage = @"El e-mail ingresado es inválido";
+    if(self) {
+        self.manager = [[UserRequestManager alloc] init];
+        self.emailFormatErrorMessage = @"El e-mail ingresado es inválido";
+    }
     return self;
 }
 

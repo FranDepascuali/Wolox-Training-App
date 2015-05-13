@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.loadingActivityIndicator.hidden = YES;
+    [self.loadingActivityIndicator setHidesWhenStopped:YES];
     self.viewModel = [[LogInViewModel alloc] init];
 }
 
@@ -33,15 +33,14 @@
         [self displayError: self.viewModel.emailFormatErrorMessage];
         return;
     }
-    self.loadingActivityIndicator.hidden = NO;
     [self.loadingActivityIndicator startAnimating];
     [self.viewModel logInWithEmail:self.emailTextField.text password:self.passwordTextField.text success:^ {
         // TODO: abrir scene de news
+        [self.loadingActivityIndicator stopAnimating];
     } error:^(NSString * error) {
         [self displayError:error];
+        [self.loadingActivityIndicator stopAnimating];
     }];
-    [self.loadingActivityIndicator stopAnimating];
-    self.loadingActivityIndicator.hidden = YES;
 }
 
 #pragma mark - Private methods
