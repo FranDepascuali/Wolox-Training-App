@@ -307,7 +307,6 @@
 				B99D46311B00E15600A604D4 /* UserRequestManager.m in Sources */,
 				B9902E361AEFDCD70015B7A8 /* RequestManager.m in Sources */,
 				F8CD9DE51AE7E6C400D4FF53 /* AppDelegate.m in Sources */,
-				B970F9FE1AF7C3C8007468C4 /* BaseModel.m in Sources */,
 				B970F9F51AF79EA2007468C4 /* LogInViewController.m in Sources */,
 				F8E4710F1AEE615400A709C1 /* SignUpViewController.m in Sources */,
 				F82AD73E1AEA87490039D8C6 /* SignUpViewModel.m in Sources */,

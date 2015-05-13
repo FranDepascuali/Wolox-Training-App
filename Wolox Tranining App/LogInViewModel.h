@@ -10,8 +10,12 @@
 
 @interface LogInViewModel : NSObject
 
+@property (strong, nonatomic) NSString *emailFormatErrorMessage;
+
 - (void)logInWithEmail:(NSString*)email password:(NSString*)password success:(void(^)(void))successBlock error:(void(^)(NSString*))errorBlock;
 
 - (void)openTermsAndConditions;
+
+- (BOOL)emailIsCorrect:(NSString*)email;
 
 @end

@@ -29,17 +29,19 @@
 }
 
 - (IBAction)logInButtonClicked:(id)sender {
+    if(![self.viewModel emailIsCorrect: self.emailTextField.text]) {
+        [self displayError: self.viewModel.emailFormatErrorMessage];
+        return;
+    }
     self.loadingActivityIndicator.hidden = NO;
     [self.loadingActivityIndicator startAnimating];
     [self.viewModel logInWithEmail:self.emailTextField.text password:self.passwordTextField.text success:^ {
-        [self.loadingActivityIndicator stopAnimating];
-        self.loadingActivityIndicator.hidden = YES;
         // TODO: abrir scene de news
     } error:^(NSString * error) {
-        [self.loadingActivityIndicator stopAnimating];
-        self.loadingActivityIndicator.hidden = YES;
         [self displayError:error];
     }];
+    [self.loadingActivityIndicator stopAnimating];
+    self.loadingActivityIndicator.hidden = YES;
 }
 
 #pragma mark - Private methods
@@ -47,5 +49,5 @@
 - (void)displayError:(NSString *)error {
     [self.view makeToast:error];
 }
-
+ 
 @end

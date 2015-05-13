@@ -23,6 +23,7 @@
 - (id)init {
     self = [super init];
     self.manager = [[UserRequestManager alloc] init];
+    self.emailFormatErrorMessage = @"El e-mail ingresado es inválido";
     return self;
 }
 
@@ -43,6 +44,12 @@
 - (void)openTermsAndConditions {
     [self openPage:TERMS_AND_CONDITIONS];
 
+}
+
+- (BOOL)emailIsCorrect:(NSString*)email {
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:email];
 }
 
 #pragma mark - Private methods
