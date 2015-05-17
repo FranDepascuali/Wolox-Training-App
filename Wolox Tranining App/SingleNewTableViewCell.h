@@ -13,6 +13,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *user;
 @property (nonatomic, weak) IBOutlet UIImageView *userImage;
 @property (weak, nonatomic) IBOutlet UILabel *desc;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
 
 
 @end

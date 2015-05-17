@@ -18,13 +18,15 @@
 
 @implementation NewsCollectionViewModel
 
-- (id)init{
+- (id)init {
     self = [super init];
-    self.manager = [[NewsRequestManager alloc] init];
+	if(self) {
+		self.manager = [[NewsRequestManager alloc] init];
+	}
     return self;
 }
 
-- (void)fetchNewsWithSuccess:(void(^)(void))successBlock error:(void(^)(NSString *))errorBlock{
+- (void)fetchNewsWithSuccess:(void(^)(void))successBlock error:(void(^)(NSString *))errorBlock {
     [self.manager fetchNewsWithSuccess:^(id response){
         NSArray* rawNews = [response objectForKey:@"results"];
         self.news = [[NSMutableArray alloc] initWithCapacity:[rawNews count]];
@@ -45,7 +47,17 @@
     return [self.news count];
 }
 
-- (NewsViewModel *)newsViewModelAtIndex:(NSUInteger)index{
+- (NewsViewModel *)newsViewModelAtIndex:(NSUInteger)index {
     return [self.news objectAtIndex:index];
 }
+
+- (void) attachImages:(UIButton*)btn {
+	[btn setImage:[UIImage imageNamed: @"like_inactive"] forState:UIControlStateNormal];
+	[btn setImage:[UIImage imageNamed: @"like_active"] forState:UIControlStateSelected];
+}
+
+- (void)likeButtonClicked:(UIButton*)btn {
+	btn.selected = !btn.selected;
+}
+
 @end

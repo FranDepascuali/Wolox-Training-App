@@ -24,22 +24,20 @@
 @implementation NewsCollectionViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    if(self) {
-        [self.loadingTableIndicator setHidesWhenStopped:YES];
-        [self.loadingTableIndicator startAnimating];
-        self.model = [NewsCollectionViewModel new];
-        [self.newsTable registerNib:[UINib nibWithNibName:CELL_ID bundle:nil] forCellReuseIdentifier:CELL_ID];
-        self.newsTable.delegate=self;
-        self.newsTable.dataSource=self;
-        [self.model fetchNewsWithSuccess:^ {
-            [self.newsTable reloadData];
-            [self.loadingTableIndicator stopAnimating];
-        }error:^(NSString * err) {
-            [self.loadingTableIndicator stopAnimating];
-            [self displayError:err];
-        }];
-    }
+	[super viewDidLoad];
+	[self.loadingTableIndicator setHidesWhenStopped:YES];
+	[self.loadingTableIndicator startAnimating];
+	self.model = [NewsCollectionViewModel new];
+	[self.newsTable registerNib:[UINib nibWithNibName:CELL_ID bundle:nil] forCellReuseIdentifier:CELL_ID];
+	self.newsTable.delegate=self;
+	self.newsTable.dataSource=self;
+	[self.model fetchNewsWithSuccess:^ {
+		[self.newsTable reloadData];
+		[self.loadingTableIndicator stopAnimating];
+	}error:^(NSString * err) {
+		[self.loadingTableIndicator stopAnimating];
+		[self displayError:err];
+	}];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -61,9 +59,11 @@
     }];
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString: [newViewModel getImage]]
                       placeholderImage:[UIImage imageNamed:@"header_logo"]];
-    
-    cell
-    
+	
+	[self.model attachImages: cell.likeButton];
+	
+	[cell.likeButton addTarget:self.model action:@selector(likeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+	
     cell.desc.text = [newViewModel getDescription];
     return cell;
 }
