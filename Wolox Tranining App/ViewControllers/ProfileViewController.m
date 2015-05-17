@@ -7,8 +7,13 @@
 //
 
 #import "ProfileViewController.h"
+#import "ProfileViewModel.h"
+#import "Toast/UIView+Toast.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ProfileViewController ()
+
+@property (nonatomic,strong) ProfileViewModel* model;
 
 @end
 
@@ -16,12 +21,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+	self.model = [[ProfileViewModel alloc] init];
+	[self.model fetchUserInfoWithSuccess:^(NSString* countryName, NSString* userName, NSString* userDescription, NSString* imageUrl) {
+		self.userCountryLabel.text = countryName;
+		self.userNameLabel.text = userName;
+		self.userDescriptionLabel.text = userDescription;
+		[self.profileImageView sd_setImageWithURL:[NSURL URLWithString: imageUrl]
+								 placeholderImage:[UIImage imageNamed:@"header_logo"]];
+	} error:^(NSString* err) {
+		[self displayError:err];
+	}];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)displayError:(NSString *)error {
+	[self.view makeToast:error];
 }
 
 @end

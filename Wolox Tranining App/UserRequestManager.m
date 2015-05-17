@@ -46,6 +46,11 @@
     [self.manager performGetRequest:nil path:[self getPath:USER_PATH endingWith:userId] success:successBlock error:errorBlock];
 }
 
+- (void)fetchUserInfoFromSessionId:(NSString*)userSession success:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock{
+	[self.manager setSerializerValue:userSession forField:@"X-Parse-Session-Token"];
+	[self.manager performGetRequest:nil path:[self getPath:USER_PATH endingWith:@"me"] success:successBlock error:errorBlock];
+}
+
 #pragma mark - Private methods
 
 - (NSString*)getPath:(NSString*)base endingWith:(NSString*)end {

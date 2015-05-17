@@ -44,6 +44,10 @@
     return self;
 }
 
+- (void)setSerializerValue:(NSString*)value forField:(NSString*)field {
+	[self.manager.requestSerializer setValue: value forHTTPHeaderField:field];
+}
+
 - (void)performPostRequest:(NSMutableDictionary *)parameters path:(NSString*)path success:(void(^)(id))successBlock error:(void(^)(NSString *))errorBlock {
     [self.manager POST:path parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if(successBlock) {

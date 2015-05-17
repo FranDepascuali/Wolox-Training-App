@@ -23,6 +23,7 @@
 		B998114C1B06394B00A56C7C /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA2A31AFA6EAE0043EBDA /* RequestManager.m */; };
 		B99D46311B00E15600A604D4 /* UserRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D46301B00E15600A604D4 /* UserRequestManager.m */; };
 		B9B9AB541AF90ACB00EB511A /* SingleNewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B9AB531AF90ACB00EB511A /* SingleNewTableViewCell.m */; };
+		F83409F41B0859C10032664A /* ProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F83409F31B0859C10032664A /* ProfileViewModel.m */; };
 		F8CD9DE21AE7E6C400D4FF53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD9DE11AE7E6C400D4FF53 /* main.m */; };
 		F8CD9DE51AE7E6C400D4FF53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD9DE41AE7E6C400D4FF53 /* AppDelegate.m */; };
 		F8CD9DEE1AE7E6C400D4FF53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8CD9DEC1AE7E6C400D4FF53 /* Main.storyboard */; };
@@ -73,6 +74,8 @@
 		B99D46301B00E15600A604D4 /* UserRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserRequestManager.m; path = ../UserRequestManager.m; sourceTree = "<group>"; };
 		B9B9AB521AF90ACB00EB511A /* SingleNewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleNewTableViewCell.h; path = ../SingleNewTableViewCell.h; sourceTree = "<group>"; };
 		B9B9AB531AF90ACB00EB511A /* SingleNewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleNewTableViewCell.m; path = ../SingleNewTableViewCell.m; sourceTree = "<group>"; };
+		F83409F21B0859C10032664A /* ProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewModel.h; sourceTree = "<group>"; };
+		F83409F31B0859C10032664A /* ProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewModel.m; sourceTree = "<group>"; };
 		F8CD9DDC1AE7E6C400D4FF53 /* Wolox Tranining App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wolox Tranining App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CD9DE01AE7E6C400D4FF53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8CD9DE11AE7E6C400D4FF53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				B94CA2BC1AFA6EC90043EBDA /* NewsViewModel.m */,
 				B94CA2BD1AFA6EC90043EBDA /* SignUpViewModel.h */,
 				B94CA2BE1AFA6EC90043EBDA /* SignUpViewModel.m */,
+				F83409F21B0859C10032664A /* ProfileViewModel.h */,
+				F83409F31B0859C10032664A /* ProfileViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 				B94CA2B21AFA6EBD0043EBDA /* NewsProfileViewController.m in Sources */,
 				B94CA2B41AFA6EBD0043EBDA /* ProfileViewController.m in Sources */,
 				B94CA2B51AFA6EBD0043EBDA /* SignUpViewController.m in Sources */,
+				F83409F41B0859C10032664A /* ProfileViewModel.m in Sources */,
 				F8CD9DE51AE7E6C400D4FF53 /* AppDelegate.m in Sources */,
 				B94CA2B11AFA6EBD0043EBDA /* LogInViewController.m in Sources */,
 				B94CA2971AFA6E6F0043EBDA /* News.m in Sources */,
