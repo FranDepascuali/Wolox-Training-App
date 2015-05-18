@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "NewsViewModel.h"
-#import <UIKit/UIKit.h>
 
 
 @interface NewsCollectionViewModel : NSObject
@@ -19,8 +18,8 @@
 
 - (NewsViewModel*)newsViewModelAtIndex:(NSUInteger)index;
 
-- (void)attachImages:(UIButton*)btn;
+- (BOOL)like:(NSUInteger)modelIndex;
 
-- (void)likeButtonClicked:(UIButton*)btn;
+- (UIImage*)likeImageAtIndex:(NSUInteger)modelIndex;
 
 @end

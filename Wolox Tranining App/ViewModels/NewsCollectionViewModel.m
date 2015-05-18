@@ -9,10 +9,14 @@
 #import "NewsCollectionViewModel.h"
 #import "NewsRequestManager.h"
 
+#define LIKE_IMAGE @"like_active"
+#define UNLIKED_IMAGE @"like_inactive"
+
 @interface NewsCollectionViewModel()
 
 @property(strong, nonatomic) NewsRequestManager* manager;
 @property(strong, nonatomic) NSMutableArray* news;
+@property(assign) BOOL likeButtonSelected;
 
 @end
 
@@ -22,6 +26,7 @@
     self = [super init];
 	if(self) {
 		self.manager = [[NewsRequestManager alloc] init];
+        self.likeButtonSelected = NO;
 	}
     return self;
 }
@@ -47,17 +52,23 @@
     return [self.news count];
 }
 
+- (BOOL)like:(NSUInteger)modelIndex {
+    NewsViewModel* newViewModel = [self.news objectAtIndex:modelIndex];
+    newViewModel.like = !newViewModel.like;
+    return newViewModel.like;
+}
+
 - (NewsViewModel *)newsViewModelAtIndex:(NSUInteger)index {
     return [self.news objectAtIndex:index];
 }
 
-- (void) attachImages:(UIButton*)btn {
-	[btn setImage:[UIImage imageNamed: @"like_inactive"] forState:UIControlStateNormal];
-	[btn setImage:[UIImage imageNamed: @"like_active"] forState:UIControlStateSelected];
+- (UIImage*)likeImageAtIndex:(NSUInteger)modelIndex {
+    NewsViewModel* newViewModel = [self.news objectAtIndex:modelIndex];
+    if(newViewModel.like) {
+        return [UIImage imageNamed: LIKE_IMAGE];
+    }
+    else {
+        return [UIImage imageNamed: UNLIKED_IMAGE];
+    }
 }
-
-- (void)likeButtonClicked:(UIButton*)btn {
-	btn.selected = !btn.selected;
-}
-
 @end

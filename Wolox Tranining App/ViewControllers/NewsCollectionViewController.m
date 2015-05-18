@@ -40,16 +40,15 @@
 	}];
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.model count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     SingleNewTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:CELL_ID];
     NewsViewModel* newViewModel = [self.model newsViewModelAtIndex:indexPath.row];
     [newViewModel fetchUserNameWithSuccess:^(NSString * name) {
@@ -59,13 +58,16 @@
     }];
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString: [newViewModel getImage]]
                       placeholderImage:[UIImage imageNamed:@"header_logo"]];
-	
-	[self.model attachImages: cell.likeButton];
-	
-	[cell.likeButton addTarget:self.model action:@selector(likeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-	
+    cell.likeButton.tag = indexPath.row;
+    [cell.likeButton setImage:[self.model likeImageAtIndex: indexPath.row] forState:UIControlStateNormal];
+	[cell.likeButton addTarget:self action:@selector(likeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     cell.desc.text = [newViewModel getDescription];
     return cell;
+}
+
+- (void)likeButtonClicked:(UIButton*)btn {
+    [self.model like: btn.tag];
+    [btn setImage:[self.model likeImageAtIndex:btn.tag] forState:UIControlStateNormal];
 }
 
 #pragma mark - Private

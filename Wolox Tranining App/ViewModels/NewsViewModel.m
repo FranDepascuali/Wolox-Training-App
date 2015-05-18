@@ -12,9 +12,11 @@
 #import "News.h"
 
 @interface NewsViewModel()
+
 @property (strong, nonatomic) News* singleNew;
 @property (strong, nonatomic) NewsRequestManager *newsManager;
 @property (strong, nonatomic) UserRequestManager *userManager;
+
 @end
 
 
@@ -26,6 +28,7 @@
         self.singleNew = [[News alloc] initWithUserId: userId imageUrl: imgUrl description: title];
         self.newsManager = [[NewsRequestManager alloc] init];
         self.userManager = [[UserRequestManager alloc] init];
+        self.like = NO;
     }
     return self;
 }

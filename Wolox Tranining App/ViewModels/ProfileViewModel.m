@@ -25,11 +25,11 @@
 	return self;
 }
 
-- (void)fetchUserInfoWithSuccess:(void(^)(NSString * countryName, NSString* userName, NSString* userDescription, NSString* imageUrl))successBlock error:(void(^)(NSString *))errorBlock {
-	NSString* userSession = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserSession"];
+- (void)fetchUserInfoWithSuccess:(void(^)(NSString *countryName, NSString *userName, NSString *userDescription, NSString *imageUrl))successBlock error:(void(^)(NSString *))errorBlock {
+	NSString *userSession = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserSession"];
 	[self.manager fetchUserInfoFromSessionId:userSession success:^(id response) {
 		if(successBlock) {
-			successBlock([response valueForKey:@"location"], [response valueForKey:@"name"],[response valueForKey:@"description"], [response valueForKey:@"picture"]);
+			successBlock([response valueForKey:@"location"], [response valueForKey:@"name"],[response valueForKey:@"description"],[response valueForKey:@"picture"]);
 		}
 	} error:^(NSString* err) {
 		if(errorBlock) {

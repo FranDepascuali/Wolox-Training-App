@@ -12,6 +12,6 @@
 
 @property (strong, nonatomic) NSString *imageUrl;
 
-- (void)fetchUserInfoWithSuccess:(void(^)(NSString * countryName, NSString* userName, NSString* userDescription, NSString* imageUrl))successBlock error:(void(^)(NSString *))errorBlock;
+- (void)fetchUserInfoWithSuccess:(void(^)(NSString *countryName, NSString *userName, NSString *userDescription, NSString *imageUrl))successBlock error:(void(^)(NSString *))errorBlock;
 
 @end

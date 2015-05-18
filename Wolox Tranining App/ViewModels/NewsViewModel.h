@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NewsViewModel : NSObject
+
+@property (nonatomic, assign) BOOL like;
 
 - (id)initWithUserId:(NSString*)userId imageUrl:(NSString*)imgUrl description:(NSString*)title;
 
@@ -16,6 +19,6 @@
 
 - (NSString*)getDescription;
 
-- (void)fetchUserNameWithSuccess:(void(^)(NSString * name))successBlock error:(void(^)(NSString*)) errorBlock;
+- (void)fetchUserNameWithSuccess:(void(^)(NSString * name))successBlock error:(void(^)(NSString*))errorBlock;
 
 @end
