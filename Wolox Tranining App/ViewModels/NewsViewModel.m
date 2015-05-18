@@ -20,7 +20,7 @@
 
 @implementation NewsViewModel
 
--(id)initWithUserId:(NSString*)userId imageUrl:(NSString*)imgUrl description:(NSString*)title{
+- (id)initWithUserId:(NSString*)userId imageUrl:(NSString*)imgUrl description:(NSString*)title{
     self = [super init];
     if(self){
         self.singleNew = [[News alloc] initWithUserId: userId imageUrl: imgUrl description: title];
@@ -30,15 +30,15 @@
     return self;
 }
 
--(NSString*)getImage{
+- (NSString*)getImage{
     return self.singleNew.image;
 }
 
--(NSString*)getDescription{
+- (NSString*)getDescription{
     return self.singleNew.desc;
 }
 
--(void)fetchUserNameWithSuccess:(void(^)(NSString * name))successBlock error: (void(^)(NSString*)) errorBlock{
+- (void)fetchUserNameWithSuccess:(void(^)(NSString * name))successBlock error:(void(^)(NSString*))errorBlock{
     if(self.singleNew.userId){
         if(self.singleNew.userName == nil){
             [self.userManager fetchUserNameWithUserId: self.singleNew.userId success:^(id response) {

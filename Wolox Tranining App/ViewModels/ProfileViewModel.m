@@ -13,8 +13,6 @@
 
 @property (strong, nonatomic) UserRequestManager *manager;
 
-
-
 @end
 
 @implementation ProfileViewModel

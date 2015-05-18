@@ -13,7 +13,7 @@
 
 @interface ProfileViewController ()
 
-@property (nonatomic,strong) ProfileViewModel* model;
+@property (strong,nonatomic) ProfileViewModel* model;
 
 @end
 
@@ -32,6 +32,8 @@
 		[self displayError:err];
 	}];
 }
+
+#pragma mark - Private methods
 
 - (void)displayError:(NSString *)error {
 	[self.view makeToast:error];

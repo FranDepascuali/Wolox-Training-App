@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userCountryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userDescriptionLabel;
