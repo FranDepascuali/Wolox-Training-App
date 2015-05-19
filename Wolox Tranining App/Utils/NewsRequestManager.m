@@ -27,7 +27,7 @@
     return self;
 }
 
-- (void) fetchNewsWithSuccess:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock{
+- (void)fetchNewsWithSuccess:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock{
     [self.manager performGetRequest: nil path: NEWS_PATH success:successBlock error:errorBlock];
 }
 
