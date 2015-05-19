@@ -10,6 +10,6 @@
 
 @interface NewsRequestManager : NSObject
 
-- (void) fetchNewsWithSuccess:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock;
+- (void)fetchNewsWithSuccess:(void(^)(id))successBlock error:(void(^)(NSString*))errorBlock;
 
 @end
