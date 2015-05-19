@@ -18,8 +18,4 @@
 
 - (NewsViewModel*)newsViewModelAtIndex:(NSUInteger)index;
 
-- (BOOL)like:(NSUInteger)modelIndex;
-
-- (UIImage*)likeImageAtIndex:(NSUInteger)modelIndex;
-
 @end

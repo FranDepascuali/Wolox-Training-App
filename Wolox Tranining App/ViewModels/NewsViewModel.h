@@ -11,8 +11,6 @@
 
 @interface NewsViewModel : NSObject
 
-@property (nonatomic, assign) BOOL like;
-
 - (id)initWithUserId:(NSString*)userId imageUrl:(NSString*)imgUrl description:(NSString*)title;
 
 - (NSString*)getImage;
@@ -20,5 +18,9 @@
 - (NSString*)getDescription;
 
 - (void)fetchUserNameWithSuccess:(void(^)(NSString * name))successBlock error:(void(^)(NSString*))errorBlock;
+
+- (void)like;
+
+- (UIImage*)likeImage;
 
 @end

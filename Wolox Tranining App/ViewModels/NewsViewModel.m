@@ -11,6 +11,9 @@
 #import "UserRequestManager.h"
 #import "News.h"
 
+#define LIKE_IMAGE @"like_active"
+#define UNLIKED_IMAGE @"like_inactive"
+
 @interface NewsViewModel()
 
 @property (strong, nonatomic) News* singleNew;
@@ -28,7 +31,7 @@
         self.singleNew = [[News alloc] initWithUserId: userId imageUrl: imgUrl description: title];
         self.newsManager = [[NewsRequestManager alloc] init];
         self.userManager = [[UserRequestManager alloc] init];
-        self.like = NO;
+        self.singleNew.liked = NO;
     }
     return self;
 }
@@ -58,4 +61,11 @@
     }
 }
 
+- (void)like {
+    self.singleNew.liked = !self.singleNew.liked;
+}
+
+- (UIImage*)likeImage {
+    return [UIImage imageNamed: (self.singleNew.liked)? LIKE_IMAGE : UNLIKED_IMAGE];
+}
 @end

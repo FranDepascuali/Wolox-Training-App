@@ -11,6 +11,7 @@
 
 @interface News : NSObject
 
+@property (nonatomic, assign) BOOL liked;
 @property (strong, nonatomic) NSString* userId;
 @property (strong, nonatomic) NSString* image;
 @property (strong, nonatomic) NSString* desc;
