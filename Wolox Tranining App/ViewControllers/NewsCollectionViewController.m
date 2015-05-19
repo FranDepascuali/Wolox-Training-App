@@ -17,7 +17,7 @@
 
 @interface NewsCollectionViewController ()
 
-@property (nonatomic,strong) NewsCollectionViewModel* model;
+@property (nonatomic,strong) NewsCollectionViewModel* newsCollectionViewModel;
 
 @end
 
@@ -27,11 +27,11 @@
 	[super viewDidLoad];
 	[self.loadingTableIndicator setHidesWhenStopped:YES];
 	[self.loadingTableIndicator startAnimating];
-	self.model = [NewsCollectionViewModel new];
+	self.newsCollectionViewModel = [NewsCollectionViewModel new];
 	[self.newsTable registerNib:[UINib nibWithNibName:CELL_ID bundle:nil] forCellReuseIdentifier:CELL_ID];
 	self.newsTable.delegate=self;
 	self.newsTable.dataSource=self;
-	[self.model fetchNewsWithSuccess:^ {
+	[self.newsCollectionViewModel fetchNewsWithSuccess:^ {
 		[self.newsTable reloadData];
 		[self.loadingTableIndicator stopAnimating];
 	}error:^(NSString * err) {
@@ -45,12 +45,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.model count];
+    return [self.newsCollectionViewModel count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SingleNewTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:CELL_ID];
-    NewsViewModel* newViewModel = [self.model newsViewModelAtIndex:indexPath.row];
+    NewsViewModel* newViewModel = [self.newsCollectionViewModel newsViewModelAtIndex:indexPath.row];
     [newViewModel fetchUserNameWithSuccess:^(NSString * name) {
         cell.user.text = name;
     } error:^(NSString* err) {
@@ -59,15 +59,17 @@
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString: [newViewModel getImage]]
                       placeholderImage:[UIImage imageNamed:@"header_logo"]];
     cell.likeButton.tag = indexPath.row;
-    [cell.likeButton setImage:[self.model likeImageAtIndex: indexPath.row] forState:UIControlStateNormal];
+    [cell.likeButton setImage:[newViewModel likeImage] forState:UIControlStateNormal];
 	[cell.likeButton addTarget:self action:@selector(likeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     cell.desc.text = [newViewModel getDescription];
     return cell;
 }
 
 - (void)likeButtonClicked:(UIButton*)btn {
-    [self.model like: btn.tag];
-    [btn setImage:[self.model likeImageAtIndex:btn.tag] forState:UIControlStateNormal];
+    NewsViewModel * newsViewModel = [self.newsCollectionViewModel newsViewModelAtIndex:btn.tag];
+    [newsViewModel like];
+    NSArray * indexPaths = @[[NSIndexPath indexPathForRow:btn.tag inSection:0]];
+    [self.newsTable reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
 }
 
 #pragma mark - Private
