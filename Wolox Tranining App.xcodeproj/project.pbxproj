@@ -13,6 +13,7 @@
 		B94CA2B11AFA6EBD0043EBDA /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA2A81AFA6EBD0043EBDA /* LogInViewController.m */; };
 		B94CA2B21AFA6EBD0043EBDA /* NewsProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA2AA1AFA6EBD0043EBDA /* NewsProfileViewController.m */; };
 		B94CA2B31AFA6EBD0043EBDA /* NewsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA2AC1AFA6EBD0043EBDA /* NewsCollectionViewController.m */; };
+		B94CA2B41AFA6EBD0043EBDA /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA2AE1AFA6EBD0043EBDA /* ProfileViewController.m */; };
 		B94CA2B51AFA6EBD0043EBDA /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA2B01AFA6EBD0043EBDA /* SignUpViewController.m */; };
 		B94CA2BF1AFA6EC90043EBDA /* LogInViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA2B81AFA6EC90043EBDA /* LogInViewModel.m */; };
 		B94CA2C01AFA6EC90043EBDA /* NewsCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA2BA1AFA6EC90043EBDA /* NewsCollectionViewModel.m */; };
@@ -55,6 +56,8 @@
 		B94CA2AA1AFA6EBD0043EBDA /* NewsProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsProfileViewController.m; sourceTree = "<group>"; };
 		B94CA2AB1AFA6EBD0043EBDA /* NewsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCollectionViewController.h; sourceTree = "<group>"; };
 		B94CA2AC1AFA6EBD0043EBDA /* NewsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCollectionViewController.m; sourceTree = "<group>"; };
+		B94CA2AD1AFA6EBD0043EBDA /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		B94CA2AE1AFA6EBD0043EBDA /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		B94CA2AF1AFA6EBD0043EBDA /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		B94CA2B01AFA6EBD0043EBDA /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		B94CA2B71AFA6EC90043EBDA /* LogInViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewModel.h; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				B94CA2AA1AFA6EBD0043EBDA /* NewsProfileViewController.m */,
 				B94CA2AB1AFA6EBD0043EBDA /* NewsCollectionViewController.h */,
 				B94CA2AC1AFA6EBD0043EBDA /* NewsCollectionViewController.m */,
+				B94CA2AD1AFA6EBD0043EBDA /* ProfileViewController.h */,
+				B94CA2AE1AFA6EBD0043EBDA /* ProfileViewController.m */,
 				B94CA2AF1AFA6EBD0043EBDA /* SignUpViewController.h */,
 				B94CA2B01AFA6EBD0043EBDA /* SignUpViewController.m */,
 			);
@@ -390,6 +395,7 @@
 				B94CA2C01AFA6EC90043EBDA /* NewsCollectionViewModel.m in Sources */,
 				B9B9AB541AF90ACB00EB511A /* SingleNewTableViewCell.m in Sources */,
 				B94CA2B21AFA6EBD0043EBDA /* NewsProfileViewController.m in Sources */,
+				B94CA2B41AFA6EBD0043EBDA /* ProfileViewController.m in Sources */,
 				B94CA2B51AFA6EBD0043EBDA /* SignUpViewController.m in Sources */,
 				F83409F41B0859C10032664A /* ProfileViewModel.m in Sources */,
 				F8CD9DE51AE7E6C400D4FF53 /* AppDelegate.m in Sources */,
