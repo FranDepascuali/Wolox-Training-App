@@ -13,7 +13,6 @@
 
 @property(strong, nonatomic) NewsRequestManager* newsManager;
 @property(strong, nonatomic) NSMutableArray* news;
-@property(assign) BOOL likeButtonSelected;
 
 @end
 
@@ -23,7 +22,6 @@
     self = [super init];
 	if(self) {
 		self.newsManager = [[NewsRequestManager alloc] init];
-        self.likeButtonSelected = NO;
 	}
     return self;
 }
