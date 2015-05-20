@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A21F6CE8C1095BA31565378 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81726B55BE47D3A50661D4A0 /* libPods.a */; };
+		5FC2162BEFB58A64D456FE18 /* libPods-Wolox Tranining AppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9038DD9DADB7B8719A8565F /* libPods-Wolox Tranining AppTests.a */; };
 		9A63F45D37043CE89D151D0E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81726B55BE47D3A50661D4A0 /* libPods.a */; };
+		B901D2FC1B0CE8690009A06F /* NewsCollectionViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B901D2FA1B0CE8630009A06F /* NewsCollectionViewModelSpec.m */; };
 		B94C93AC1AFC002400A5F67E /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94C93AB1AFC002400A5F67E /* NewsTableViewCell.xib */; };
 		B94CA2971AFA6E6F0043EBDA /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA2961AFA6E6F0043EBDA /* News.m */; };
 		B94CA2B11AFA6EBD0043EBDA /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA2A81AFA6EBD0043EBDA /* LogInViewController.m */; };
@@ -21,8 +24,10 @@
 		B94CA2C21AFA6EC90043EBDA /* SignUpViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA2BE1AFA6EC90043EBDA /* SignUpViewModel.m */; };
 		B998114B1B06380900A56C7C /* NewsRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B998114A1B06380900A56C7C /* NewsRequestManager.m */; };
 		B998114C1B06394B00A56C7C /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA2A31AFA6EAE0043EBDA /* RequestManager.m */; };
+		B99811891B0CC0C200A56C7C /* LogInViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B99811871B0CC00700A56C7C /* LogInViewModelSpec.m */; };
 		B99D46311B00E15600A604D4 /* UserRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D46301B00E15600A604D4 /* UserRequestManager.m */; };
 		B9B9AB541AF90ACB00EB511A /* SingleNewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B9AB531AF90ACB00EB511A /* SingleNewTableViewCell.m */; };
+		D461DF29FC99C9B4D137A7F4 /* libPods-Wolox Tranining App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425574E50AA0DCBEABD7DF27 /* libPods-Wolox Tranining App.a */; };
 		F83409F41B0859C10032664A /* ProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F83409F31B0859C10032664A /* ProfileViewModel.m */; };
 		F8CD9DE21AE7E6C400D4FF53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD9DE11AE7E6C400D4FF53 /* main.m */; };
 		F8CD9DE51AE7E6C400D4FF53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD9DE41AE7E6C400D4FF53 /* AppDelegate.m */; };
@@ -42,9 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		425574E50AA0DCBEABD7DF27 /* libPods-Wolox Tranining App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wolox Tranining App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE0CEC310899A93D3573FF6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5758CB3A9EC9A4E62D827F6D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		639AB17E2304D4044606F34C /* Pods-Wolox Tranining AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolox Tranining AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wolox Tranining AppTests/Pods-Wolox Tranining AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81726B55BE47D3A50661D4A0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66735F6C1C6B331D84A3CC7 /* Pods-Wolox Tranining App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolox Tranining App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wolox Tranining App/Pods-Wolox Tranining App.debug.xcconfig"; sourceTree = "<group>"; };
+		B901D2FA1B0CE8630009A06F /* NewsCollectionViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCollectionViewModelSpec.m; sourceTree = "<group>"; };
 		B94C93AB1AFC002400A5F67E /* NewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		B94CA2951AFA6E6F0043EBDA /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		B94CA2961AFA6E6F0043EBDA /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
@@ -70,10 +79,13 @@
 		B94CA2BE1AFA6EC90043EBDA /* SignUpViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewModel.m; sourceTree = "<group>"; };
 		B99811491B06380000A56C7C /* NewsRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsRequestManager.h; sourceTree = "<group>"; };
 		B998114A1B06380900A56C7C /* NewsRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsRequestManager.m; sourceTree = "<group>"; };
+		B99811871B0CC00700A56C7C /* LogInViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewModelSpec.m; sourceTree = "<group>"; };
 		B99D462F1B00E15600A604D4 /* UserRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserRequestManager.h; path = ../UserRequestManager.h; sourceTree = "<group>"; };
 		B99D46301B00E15600A604D4 /* UserRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserRequestManager.m; path = ../UserRequestManager.m; sourceTree = "<group>"; };
 		B9B9AB521AF90ACB00EB511A /* SingleNewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleNewTableViewCell.h; path = ../SingleNewTableViewCell.h; sourceTree = "<group>"; };
 		B9B9AB531AF90ACB00EB511A /* SingleNewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleNewTableViewCell.m; path = ../SingleNewTableViewCell.m; sourceTree = "<group>"; };
+		D87A4CF30AF1D490BC660267 /* Pods-Wolox Tranining AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolox Tranining AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wolox Tranining AppTests/Pods-Wolox Tranining AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		F16AB98C16425CED0B903935 /* Pods-Wolox Tranining App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolox Tranining App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wolox Tranining App/Pods-Wolox Tranining App.release.xcconfig"; sourceTree = "<group>"; };
 		F83409F21B0859C10032664A /* ProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewModel.h; sourceTree = "<group>"; };
 		F83409F31B0859C10032664A /* ProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewModel.m; sourceTree = "<group>"; };
 		F8CD9DDC1AE7E6C400D4FF53 /* Wolox Tranining App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wolox Tranining App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +98,7 @@
 		F8CD9DF21AE7E6C400D4FF53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F8CD9DF81AE7E6C400D4FF53 /* Wolox Tranining AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wolox Tranining AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CD9DFD1AE7E6C400D4FF53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9038DD9DADB7B8719A8565F /* libPods-Wolox Tranining AppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wolox Tranining AppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A63F45D37043CE89D151D0E /* libPods.a in Frameworks */,
+				D461DF29FC99C9B4D137A7F4 /* libPods-Wolox Tranining App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FC2162BEFB58A64D456FE18 /* libPods-Wolox Tranining AppTests.a in Frameworks */,
+				3A21F6CE8C1095BA31565378 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +128,10 @@
 			children = (
 				5758CB3A9EC9A4E62D827F6D /* Pods.debug.xcconfig */,
 				4EE0CEC310899A93D3573FF6 /* Pods.release.xcconfig */,
+				639AB17E2304D4044606F34C /* Pods-Wolox Tranining AppTests.debug.xcconfig */,
+				D87A4CF30AF1D490BC660267 /* Pods-Wolox Tranining AppTests.release.xcconfig */,
+				B66735F6C1C6B331D84A3CC7 /* Pods-Wolox Tranining App.debug.xcconfig */,
+				F16AB98C16425CED0B903935 /* Pods-Wolox Tranining App.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -120,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				81726B55BE47D3A50661D4A0 /* libPods.a */,
+				425574E50AA0DCBEABD7DF27 /* libPods-Wolox Tranining App.a */,
+				F9038DD9DADB7B8719A8565F /* libPods-Wolox Tranining AppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -241,6 +263,8 @@
 			isa = PBXGroup;
 			children = (
 				F8CD9DFC1AE7E6C400D4FF53 /* Supporting Files */,
+				B99811871B0CC00700A56C7C /* LogInViewModelSpec.m */,
+				B901D2FA1B0CE8630009A06F /* NewsCollectionViewModelSpec.m */,
 			);
 			path = "Wolox Tranining AppTests";
 			sourceTree = SOURCE_ROOT;
@@ -279,9 +303,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8CD9E051AE7E6C400D4FF53 /* Build configuration list for PBXNativeTarget "Wolox Tranining AppTests" */;
 			buildPhases = (
+				86B050659CF67B64EBE2CF70 /* Check Pods Manifest.lock */,
 				F8CD9DF41AE7E6C400D4FF53 /* Sources */,
 				F8CD9DF51AE7E6C400D4FF53 /* Frameworks */,
 				F8CD9DF61AE7E6C400D4FF53 /* Resources */,
+				04C7303E927E8CC133AD2BC5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -352,7 +378,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		04C7303E927E8CC133AD2BC5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wolox Tranining AppTests/Pods-Wolox Tranining AppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		76DF71AB3113029F6FD31940 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		86B050659CF67B64EBE2CF70 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,7 +435,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wolox Tranining App/Pods-Wolox Tranining App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -413,6 +469,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B901D2FC1B0CE8690009A06F /* NewsCollectionViewModelSpec.m in Sources */,
+				B99811891B0CC0C200A56C7C /* LogInViewModelSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,7 +588,7 @@
 		};
 		F8CD9E031AE7E6C400D4FF53 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5758CB3A9EC9A4E62D827F6D /* Pods.debug.xcconfig */;
+			baseConfigurationReference = B66735F6C1C6B331D84A3CC7 /* Pods-Wolox Tranining App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Wolox Tranining App/Info.plist";
@@ -541,7 +599,7 @@
 		};
 		F8CD9E041AE7E6C400D4FF53 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EE0CEC310899A93D3573FF6 /* Pods.release.xcconfig */;
+			baseConfigurationReference = F16AB98C16425CED0B903935 /* Pods-Wolox Tranining App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Wolox Tranining App/Info.plist";
@@ -552,8 +610,10 @@
 		};
 		F8CD9E061AE7E6C400D4FF53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 639AB17E2304D4044606F34C /* Pods-Wolox Tranining AppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -563,6 +623,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Wolox Tranining AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wolox Tranining App.app/Wolox Tranining App";
@@ -571,13 +632,16 @@
 		};
 		F8CD9E071AE7E6C400D4FF53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D87A4CF30AF1D490BC660267 /* Pods-Wolox Tranining AppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Wolox Tranining AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wolox Tranining App.app/Wolox Tranining App";
