@@ -1,2 +1,2 @@
 # Wolox-Training-App
-Wolox Training up by Francisco Depascuali
+Wolox Training app by Francisco Depascuali
