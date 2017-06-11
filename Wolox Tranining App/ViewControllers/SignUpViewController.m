@@ -28,7 +28,10 @@
         return;
     }
     [self.viewModel createUserWithEmail:self.emailTextField.text password:self.passwordTextField.text success:^ {
-        // TODO: abrir scene de news
+        NSString * storyboardName = @"MainStoryboard";
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"NewsProfileViewController"];
+        [self presentViewController:vc animated:YES completion:nil];
     } error:^(NSString* error) {
         [self displayError:error];
     }];
